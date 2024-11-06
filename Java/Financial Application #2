@@ -1,0 +1,24 @@
+//import class Scanner for user input.
+import java.util.Scanner;
+public class Exercise {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+//print statements for user input.
+        System.out.println("Enter investment amount: ");
+        double investmentAmount = input.nextDouble();
+
+        System.out.println("Enter annual interest in percentage: ");
+        double annualInterestRate = input.nextDouble();
+
+        System.out.println("Enter number of years: ");
+        int numberOfYears = input.nextInt();
+//calculate monthly interest rate by dividing APR by 12 mos.
+        double monthlyInterestRate = (annualInterestRate / 100 / 12);
+//calculate future investment value with given formula.
+        double futureInvestmentValue = investmentAmount * Math.pow(( 1 + monthlyInterestRate), numberOfYears * 12);
+//cast type value to a double.
+        double accumulatedValue = (double) futureInvestmentValue;
+//output message using string concatenation.
+        System.out.println("Accumulated value is $" + accumulatedValue);
+    }
+}
