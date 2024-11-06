@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Exercise {
+
+  public static void main(String [] argus) {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Enter the subtotal and a gratuity rate:");
+
+      double number1 = input.nextDouble();
+      double number2 = input.nextDouble();
+    
+      double subtotal = number1;
+      double gratuityRate = number2;
+      double gratuity;
+      double total;
+      
+      //assign variables for gratuity and total
+      gratuity = subtotal * gratuityRate / 100;
+      total = subtotal + gratuity;
+      
+      System.out.println("The gratuity is $" + (double) gratuity + " and total is $" + (double) total);
+  }
+} 
