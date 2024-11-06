@@ -1,0 +1,37 @@
+public class Exercise {
+
+    private double width;
+    private double height;
+
+    public Exercise() {
+        this.width = 1;
+        this.height = 2;
+    }
+    public Exercise(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+    public double getArea() {
+        return width * height;
+    }
+    public double getPerimeter() {
+        return 2 * (width + height);
+    }
+    public double getWidth() {
+        return width;
+    }
+    public double getHeight() {
+        return height;
+    }
+    public static void main(String[] args) {
+        Exercise rectangle1 = new Exercise(4, 40);
+        Exercise rectangle2 = new Exercise(3.5, 35.9);
+
+        System.out.println("Rectangle 1 : width = " + rectangle1.getWidth() + ", height =  "
+        + rectangle1.getHeight() + ", area = " + rectangle1.getArea() + ", perimeter = " + rectangle1.getPerimeter());
+
+        System.out.println("Rectangle 2 : width = " + rectangle2.getWidth() + ", height = " 
+        + rectangle2.getHeight() + ", area = " + rectangle2.getArea() + ", perimeter = " + rectangle2.getPerimeter());
+    }
+  
+}
